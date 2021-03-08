@@ -2,7 +2,7 @@
 
 # name: discourse-limit-stats-to-staff
 # about: Limit stats to staff
-# version: 0.0.1
+# version: 0.0.2
 # date: 8 March 2021
 # authors: Neo
 # url: https://github.com/unixneo/discourse-limit-stats-to-staff
@@ -21,5 +21,17 @@ after_initialize do
        end
      end
    end
+
+  module DiscourseHubExtension
+    def self.get_payload
+      {}
+    end
+  end
+
+  module DiscourseHub
+    if SiteSetting.enable_limit_stats_to_staff?
+      prepend DiscourseHubExtension
+    end
+  end
 end          
 
