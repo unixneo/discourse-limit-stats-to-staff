@@ -2,7 +2,7 @@
 
 # name: discourse-limit-stats-to-staff
 # about: Limit stats to staff
-# version: 0.0.2
+# version: 0.0.21
 # date: 8 March 2021
 # authors: Neo
 # url: https://github.com/unixneo/discourse-limit-stats-to-staff
